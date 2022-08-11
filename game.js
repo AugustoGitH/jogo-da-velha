@@ -50,16 +50,16 @@ function isWin(){
         
         if(tabeleiro[pos1] == tabeleiro[pos2] && tabeleiro[pos1] == tabeleiro[pos3] && tabeleiro[pos1] != ""){
             return true
-        }    
+        }
+            
+        
     }
     if(tabeleiro.every( element => element != "")){
         telaalert.style.visibility = "visible"
         telaalert.style.opacity = "1"
-        vencedorText = ""
-        estadoEm_win.innerHTML = "DEU VELHA :("
-    }else{
-        return false
+        vencedorText.innerHTML = "Nenhum"
     }
+    return false
     
 }
 function restart(){
@@ -69,4 +69,6 @@ function restart(){
     removesimbolo()
     telaalert.style.visibility = "hidden"
     telaalert.style.opacity = "0"
+    vencedorText.innerHTML = ""
+    
 }
