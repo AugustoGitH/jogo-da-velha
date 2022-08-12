@@ -57,7 +57,7 @@ function isWin(){
     if(tabeleiro.every( element => element != "")){
         telaalert.style.visibility = "visible"
         telaalert.style.opacity = "1"
-        vencedorText.innerHTML = "Nenhum"
+        vencedorText.innerHTML = "NENHUM"
     }
     return false
     
@@ -69,6 +69,9 @@ function restart(){
     removesimbolo()
     telaalert.style.visibility = "hidden"
     telaalert.style.opacity = "0"
-    vencedorText.innerHTML = ""
+    setTimeout(()=>{
+        vencedorText.innerHTML = ""
+    }, 200)
+
     
 }
